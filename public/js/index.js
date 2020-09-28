@@ -5,7 +5,7 @@ $(window).on('load',function(){
 
 var subjects = [
         {
-            subject: 'Computers',
+            subject: 'Computer',
             link: 'https://meet.google.com/computer',
             teacher: 'Er. S Babu',
             image: 'images/13.jpg'
