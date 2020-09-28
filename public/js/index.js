@@ -183,7 +183,7 @@ $("#studentClass").focusout(function() {
             $("#human").removeAttr("disabled");
             $("#human").click(function(){
                 $(".welcomeUser").removeAttr("disabled");
-                $.notify("Verified successfully!",{ position:"top center",className: "success",showAnimation: 'slideDown',autoHideDelay: 1500  });
+                $.notify("Verified successfully!",{ position:"top left",className: "success",showAnimation: 'slideDown',autoHideDelay: 1500  });
             })
 
             $("#class #human").notify("Click here!",{ position:"top left",className: "info",showAnimation: 'slideDown',autoHideDelay: 1500  });
@@ -191,7 +191,7 @@ $("#studentClass").focusout(function() {
     }
     else{
         // alert("You're too old for this!")
-        $.notify("You're too old for this!",{ position:"top center",className: "error"  });
+        $.notify("You're too old for this!",{ position:"top left",className: "error"  });
     }
         
   })
@@ -201,6 +201,6 @@ $("#studentClass").focusout(function() {
         $('#myModal2').modal('show');
    }, 2500);
     $(".welcome").empty();
-    $(".welcome").append("Welcome "+name);
+    $(".welcome").append("Hello! "+name);
 })
 

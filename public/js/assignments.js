@@ -67,7 +67,7 @@ $(document).ready(function(){
         $(this).closest(".uploadDoc").remove();
       }else{
         // alert("You have to upload at least one document.");
-        $(".btn-check").notify("You have to upload at least one document.",{ position:"top center",className: "error",showAnimation: 'slideDown',autoHideDelay: 2000  });
+        $(".btn-check").notify("You have to upload at least one document.",{ position:"top left",className: "error",showAnimation: 'slideDown',autoHideDelay: 2000  });
 
       } 
    });

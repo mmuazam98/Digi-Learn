@@ -111,25 +111,25 @@ body.modal-open #index,body.modal-open #days,body.modal-open #navbar,body.modal-
 @media(max-width:643px){
   #bottom-nav .nav li a{
     display: inline!important;
-    padding:0 13vw!important;
+    padding:0 13.5vw!important;
   }
 }
 @media(max-width:468px){
   #bottom-nav .nav li a{
     display: inline!important;
-    padding:0 12vw!important;
+    padding:0 13vw!important;
   }
 }
-@media(max-width:370px){
+@media(max-width:392px){
   #bottom-nav .nav li a{
     display: inline!important;
-    padding:0 11vw!important;
+    padding:0 12.5vw!important;
   }
 }
-@media(max-width:360px){
+@media(max-width:349px){
   #bottom-nav .nav li a{
     display: inline!important;
-    padding:0 11vw!important;
+    padding:0 11.75vw!important;
   }
 }
 /* contact form  */

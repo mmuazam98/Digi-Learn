@@ -48,7 +48,7 @@ document.getElementById("send").addEventListener("click", function() {
 
         function error() {
         //   alert("error uploading file");
-        $.notify("An error occured. Please try again.",{ position:"top center",className: "error"  });
+        $.notify("An error occured. Please try again.",{ position:"top left",className: "error"  });
 
         },
 
@@ -56,7 +56,7 @@ document.getElementById("send").addEventListener("click", function() {
         //   document.getElementById(
         //     "uploading"
         //   ).innerHTML += `${files[i].name} upoaded <br />`;
-        $.notify(files[i].name + " uploaded successfully!",{ position:"top center",className: "success"});
+        $.notify(files[i].name + " uploaded successfully!",{ position:"top left",className: "success"});
         setTimeout(function(){
             $('#pgrs1').hide();
             $("#send").html("<i class='fa fa-check-circle'></i> Uploaded")
@@ -66,7 +66,7 @@ document.getElementById("send").addEventListener("click", function() {
     }
   } else {
     // alert("No file chosen");
-    $.notify("Please choose atleast one file!",{ position:"top center",className: "error"  });
+    $.notify("Please choose atleast one file!",{ position:"top left",className: "error"  });
   }
 });
 
@@ -105,7 +105,7 @@ document.getElementById("send2").addEventListener("click", function() {
 
         function error() {
         //   alert("error uploading file");
-        $.notify("An error occured. Please try again.",{ position:"top center",className: "error"  });
+        $.notify("An error occured. Please try again.",{ position:"top left",className: "error"  });
 
         },
 
@@ -113,7 +113,7 @@ document.getElementById("send2").addEventListener("click", function() {
         //   document.getElementById(
         //     "uploading"
         //   ).innerHTML += `${files[i].name} upoaded <br />`;
-        $.notify(files2[i].name + " uploaded successfully!",{ position:"top center",className: "success"});
+        $.notify(files2[i].name + " uploaded successfully!",{ position:"top left",className: "success"});
         setTimeout(function(){
             $("#send2").html("<i class='fa fa-check-circle'></i> Uploaded")
             $('#pgrs2').hide();
@@ -123,7 +123,7 @@ document.getElementById("send2").addEventListener("click", function() {
     }
   } else {
     // alert("No file chosen");
-    $.notify("Please choose atleast one file!",{ position:"top center",className: "error"  });
+    $.notify("Please choose atleast one file!",{ position:"top left",className: "error"  });
   }
 });
 
@@ -162,7 +162,7 @@ document.getElementById("send3").addEventListener("click", function() {
 
         function error() {
         //   alert("error uploading file");
-        $.notify("An error occured. Please try again.",{ position:"top center",className: "error"  });
+        $.notify("An error occured. Please try again.",{ position:"top left",className: "error"  });
 
         },
 
@@ -170,7 +170,7 @@ document.getElementById("send3").addEventListener("click", function() {
         //   document.getElementById(
         //     "uploading"
         //   ).innerHTML += `${files[i].name} upoaded <br />`;
-        $.notify(files3[i].name + " uploaded successfully!",{ position:"top center",className: "success"});
+        $.notify(files3[i].name + " uploaded successfully!",{ position:"top left",className: "success"});
         setTimeout(function(){
             $('#pgrs3').hide();
             $('#send3').html("<i class='fa fa-check-circle'></i> Uploaded")
@@ -180,7 +180,7 @@ document.getElementById("send3").addEventListener("click", function() {
     }
   } else {
     // alert("No file chosen");
-    $.notify("Please choose atleast one file!",{ position:"top center",className: "error"  });
+    $.notify("Please choose atleast one file!",{ position:"top left",className: "error"  });
   }
 });
 
@@ -219,7 +219,7 @@ document.getElementById("send4").addEventListener("click", function() {
 
         function error() {
         //   alert("error uploading file");
-        $.notify("An error occured. Please try again.",{ position:"top center",className: "error"  });
+        $.notify("An error occured. Please try again.",{ position:"top left",className: "error"  });
 
         },
 
@@ -227,7 +227,7 @@ document.getElementById("send4").addEventListener("click", function() {
         //   document.getElementById(
         //     "uploading"
         //   ).innerHTML += `${files[i].name} upoaded <br />`;
-        $.notify(files4[i].name + " uploaded successfully!",{ position:"top center",className: "success"});
+        $.notify(files4[i].name + " uploaded successfully!",{ position:"top left",className: "success"});
         setTimeout(function(){
             $('#pgrs4').hide();
             $("#send4").html("<i class='fa fa-check-circle'></i> Uploaded")
@@ -237,7 +237,7 @@ document.getElementById("send4").addEventListener("click", function() {
     }
   } else {
     // alert("No file chosen");
-    $.notify("Please choose atleast one file!",{ position:"top center",className: "error"  });
+    $.notify("Please choose atleast one file!",{ position:"top left",className: "error"  });
   }
 });
 
@@ -276,7 +276,7 @@ document.getElementById("send5").addEventListener("click", function() {
 
         function error() {
         //   alert("error uploading file");
-        $.notify("An error occured. Please try again.",{ position:"top center",className: "error"  });
+        $.notify("An error occured. Please try again.",{ position:"top left",className: "error"  });
 
         },
 
@@ -284,7 +284,7 @@ document.getElementById("send5").addEventListener("click", function() {
         //   document.getElementById(
         //     "uploading"
         //   ).innerHTML += `${files[i].name} upoaded <br />`;
-        $.notify(files5[i].name + " uploaded successfully!",{ position:"top center",className: "success"});
+        $.notify(files5[i].name + " uploaded successfully!",{ position:"top left",className: "success"});
         setTimeout(function(){
             $("#send5").html("<i class='fa fa-check-circle'></i> Uploaded")
             $('#pgrs5').hide();
@@ -294,7 +294,7 @@ document.getElementById("send5").addEventListener("click", function() {
     }
   } else {
     // alert("No file chosen");
-    $.notify("Please choose atleast one file!",{ position:"top center",className: "error"  });
+    $.notify("Please choose atleast one file!",{ position:"top left",className: "error"  });
   }
 });
 
@@ -333,7 +333,7 @@ document.getElementById("send6").addEventListener("click", function() {
 
         function error() {
         //   alert("error uploading file");
-        $.notify("An error occured. Please try again.",{ position:"top center",className: "error"  });
+        $.notify("An error occured. Please try again.",{ position:"top left",className: "error"  });
 
         },
 
@@ -341,7 +341,7 @@ document.getElementById("send6").addEventListener("click", function() {
         //   document.getElementById(
         //     "uploading"
         //   ).innerHTML += `${files[i].name} upoaded <br />`;
-        $.notify(files6[i].name + " uploaded successfully!",{ position:"top center",className: "success"});
+        $.notify(files6[i].name + " uploaded successfully!",{ position:"top left",className: "success"});
         setTimeout(function(){
             $('#pgrs6').hide();
             $('#send6').html("<i class='fa fa-check-circle'></i> Uploaded")
@@ -351,7 +351,7 @@ document.getElementById("send6").addEventListener("click", function() {
     }
   } else {
     // alert("No file chosen");
-    $.notify("Please choose atleast one file!",{ position:"top center",className: "error"  });
+    $.notify("Please choose atleast one file!",{ position:"top left",className: "error"  });
   }
 });
 
