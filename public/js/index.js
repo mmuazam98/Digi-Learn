@@ -5,8 +5,8 @@ $(window).on('load',function(){
 
 var subjects = [
         {
-            subject: 'Computer Science',
-            link: 'https://meet.google.com/computer-science',
+            subject: 'Computers',
+            link: 'https://meet.google.com/computer',
             teacher: 'Er. S Babu',
             image: 'images/13.jpg'
         },
@@ -30,13 +30,13 @@ var subjects = [
         },
         {
             subject: 'Mathematics',
-            link: 'https://meet.google.com/mathematics',
+            link: 'https://meet.google.com/maths',
             teacher: 'Mrs. Annie U',
             image: 'images/15.jpg'
         },        
         {
             subject: 'Social Studies',
-            link: 'https://meet.google.com/social-studies',
+            link: 'https://meet.google.com/sscience',
             teacher: 'Dr. S Sameehah',
             image: 'images/12.jpg'
         }
