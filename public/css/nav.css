@@ -120,10 +120,16 @@ body.modal-open #index,body.modal-open #days,body.modal-open #navbar,body.modal-
     padding:0 12vw!important;
   }
 }
-@media(max-width:367px){
+@media(max-width:370px){
   #bottom-nav .nav li a{
     display: inline!important;
-    padding:0 10vw!important;
+    padding:0 11vw!important;
+  }
+}
+@media(max-width:360px){
+  #bottom-nav .nav li a{
+    display: inline!important;
+    padding:0 11vw!important;
   }
 }
 /* contact form  */

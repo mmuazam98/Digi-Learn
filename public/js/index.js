@@ -36,7 +36,7 @@ var subjects = [
         },        
         {
             subject: 'Social Studies',
-            link: 'https://meet.google.com/sscience',
+            link: 'https://meet.google.com/s-science',
             teacher: 'Dr. S Sameehah',
             image: 'images/12.jpg'
         }
@@ -159,15 +159,16 @@ $("#days span").click(function(){
 
 
 
-$('#myModal').modal({
-    backdrop: 'static',
-    keyboard: false
-})
+
 $(window).on('load',function(){
     // $('#myModal').modal('show');
     setTimeout(function(){
         $('#myModal').modal('show');
    }, 0);
+   $('#myModal').modal({
+        backdrop: 'static',
+        keyboard: false
+    })
 });
 
 $(".welcomeUser").attr("disabled","true");
@@ -199,6 +200,7 @@ $("#studentClass").focusout(function() {
     setTimeout(function(){
         $('#myModal2').modal('show');
    }, 2500);
+    $(".welcome").empty();
     $(".welcome").append("Welcome "+name);
 })
 

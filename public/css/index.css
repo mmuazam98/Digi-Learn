@@ -139,6 +139,7 @@
 #index a.card-link{
     text-decoration: none;
     color: white;
+
     font-size: 15px;
 }
 #index a.card-link:hover{
@@ -210,16 +211,21 @@
         height: 200px;
     }   
 }
+@media(max-width:490px){
+    #index a.card-link{
+        color: #000;
+    }
+}
 @media(max-width:450px){
     .card{
         margin: 20px 0;
         margin-left: 30px;
-        width: 75vw!important;
-        height: 200px;
+        width: 78vw!important;
+        height: 210px;
     }
     .card img{
-        width:75vw!important;
-        height: 200px;
+        width:78vw!important;
+        height: 210px;
     }
     #days .container span{
         margin: 5px 7px;
@@ -229,8 +235,22 @@
     #days .today::before{
         left: 12px!important;
     }
+    .card{
+        margin: 20px 0;
+        margin-left: 30px;
+        width: 85vw!important;
+        height: 215px;
+    }
+    .card img{
+        width:85vw!important;
+        height: 215px;
+    }
 }
 @media(max-width:365px){
+    
+    #days .container span{
+        margin: 5px 7px;
+    }
     #days .today::before{
         left: 11px!important;
     }
