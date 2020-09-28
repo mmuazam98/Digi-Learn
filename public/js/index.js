@@ -159,10 +159,10 @@ $("#days span").click(function(){
 
 
 
-// $('#myModal').modal({
-//     backdrop: 'static',
-//     keyboard: false
-// })
+$('#myModal').modal({
+    backdrop: 'static',
+    keyboard: false
+})
 $(window).on('load',function(){
     // $('#myModal').modal('show');
     setTimeout(function(){
