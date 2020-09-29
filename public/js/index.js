@@ -223,6 +223,6 @@ $("#studentClass").focusout(function() {
         $('#myModal2').modal('show');
    }, 1500);
     $(".welcome").empty();
-     $(".welcome").append("<h4 class='text-center'>Hello! "+name+ "&#128522</h4><h4 class='text-center'>Welcome to</h4><br><img src='images/welcome.jpg' height='250'>");
+     $(".welcome").append("<h4 class='text-center'>Hello! "+name+ "&#128522</h4><h4 class='text-center'>Welcome to</h4><br><img src='images/welcome.jpg' class='img-fluid' height='250'>");
 })
 
