@@ -1,10 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 /* body{
     background: linear-gradient(to right, #23a3ce,#fff);
 } */
-
+#myModal2{
+    font-family: 'Lobster', cursive;
+    
+}
+#myModal h4{
+    font-size: 25px;
+}
+#myModal2 .close{
+    position: absolute;
+    z-index: 9999999;
+    right: 10px;
+    font-size: 30px;
+    outline: none;
+    border: none;
+}
+#myModal2 .close:focus,
+#myModal2 .close:active
+#myModal2 .close:hover{
+    outline: none;
+    border: none;
+}
 #class .btn {
     /* background:linear-gradient(to right, #ff512f, #f09819); */
     border: none;

@@ -31,8 +31,8 @@
   animation: loader 4s ease infinite alternate;
 }
 .loader-img{
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height:350px;
 }
 @keyframes loader{
   0%{

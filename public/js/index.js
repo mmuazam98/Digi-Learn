@@ -193,14 +193,14 @@ if(getCookie()==" ")
     }, 0);
 }
 $(window).on('load',function(){
-    // $('#myModal').modal('show');
-//     setTimeout(function(){
-//         $('#myModal').modal('show');
-//    }, 0);
-//    $('#myModal').modal({
-//         backdrop: 'static',
-//         keyboard: false
-//     })
+    $('#myModal').modal('show');
+    setTimeout(function(){
+        $('#myModal').modal('show');
+   }, 0);
+   $('#myModal').modal({
+        backdrop: 'static',
+        keyboard: false
+    })
 });
 
 $(".welcomeUser").attr("disabled","true");
@@ -233,6 +233,6 @@ $("#studentClass").focusout(function() {
         $('#myModal2').modal('show');
    }, 2500);
     $(".welcome").empty();
-    $(".welcome").append("Hello! "+name);
+     $(".welcome").append("<h4 class='text-center'>Hello! "+name+ "</h4><h4 class='text-center'>Welcome to</h4><br><img src='images/welcome.jpg' height='250'>");
 })
 
