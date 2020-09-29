@@ -28,7 +28,7 @@
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  animation: loader 4s ease alternate;
+  animation: loader 4s ease infinite alternate;
 }
 .loader-img{
   width: 400px;
