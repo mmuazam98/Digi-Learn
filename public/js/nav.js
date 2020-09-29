@@ -1,5 +1,8 @@
 $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
+var counter=0;
 $(window).load(function() {
+  counter++;
+  alert(counter)
   $(".loader").delay(2000).fadeOut("slow");
   $("#overlayer").delay(2000).fadeOut("slow");
 })
