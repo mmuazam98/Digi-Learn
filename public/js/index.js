@@ -107,93 +107,82 @@ $("#"+n).addClass("currentDay")
 randomize(n,Day);
 
 if(n=="Sat"||n=="Sun"){
-    n = "Mon";
-    $("#Mon").addClass("nextDay");
-    $("#Mon").addClass("currentDay");
-}
-let len = subjects.length;
-len-=1;
-for (var i=len; i>=0; i--){
-        
-        $("section#index").append(
-                `<div class="col-xl-12 ">
-                        <div class="card">
-                        <img class="card-img" src="${subjects[Day[i]-1].image}" alt="subject">
-                        <div class="card-img-overlay text-white ">
-                            <h4 class="card-title">${subjects[Day[i]-1].subject}</h4>
-                            <a href="${subjects[Day[i]-1].link}" target="_blank" class="card-link">${subjects[Day[i]-1].link}</a>
-                            <h6 class="card-subtitle mb-2">${subjects[Day[i]-1].teacher}</h6>
-                            <p class="card-text">SLOT: ${slots[len-i].slot}</p>
-                        </div>
-                        </div>
-                    </div>`
-            )
+    // n = "Mon";
+    // $("#Mon").addClass("nextDay");
+    $(".cb").click(function(){
+        setTimeout(function(){
+                $('#myModal3').modal('show');
+        }, 1000);
+    })
     
-    }
+    $("#wknd").addClass("currentDay");
+    $("#wknd").addClass("today");
+    $(".time-table").hide()
+    $("#games").show()
+}
 
 
-$("#days span").click(function(){
-    let day = $(this).html(),Day=[];
-
-    randomize(day,Day);
-            
-    $("#days span").removeClass("currentDay")
-    $(this).toggleClass("currentDay")
-    $("section#index").empty();
+if(n!="Sat"&&n!="Sun"){
+    $("#games").hide()
+    let len = subjects.length;
+    len-=1;
     for (var i=len; i>=0; i--){
-        $("section#index").append(
-                `<div class="col-xl-12 ">
-                        <div class="card">
-                        <img class="card-img" src="${subjects[Day[i]-1].image}" alt="subject">
-                        <div class="card-img-overlay text-white ">
-                            <h4 class="card-title">${subjects[Day[i]-1].subject}</h4>
-                            <a href="https://meet.google.com/sqb-rzrs-jee" target="_blank" class="card-link">https://meet.google.com/sqb-rzrs-jee</a>
-                            <h6 class="card-subtitle mb-2">${subjects[Day[i]-1].teacher}</h6>
-                            <p class="card-text">SLOT: ${slots[len-i].slot}</p>
-                        </div>
-                        </div>
-                    </div>`
-            )
-    }
+            
+            $("section#index").append(
+                    `<div class="col-xl-12 time-table" >
+                            <div class="card">
+                            <img class="card-img" src="${subjects[Day[i]-1].image}" alt="subject">
+                            <div class="card-img-overlay text-white ">
+                                <h4 class="card-title">${subjects[Day[i]-1].subject}</h4>
+                                <a href="${subjects[Day[i]-1].link}" target="_blank" class="card-link">${subjects[Day[i]-1].link}</a>
+                                <h6 class="card-subtitle mb-2">${subjects[Day[i]-1].teacher}</h6>
+                                <p class="card-text">SLOT: ${slots[len-i].slot}</p>
+                            </div>
+                            </div>
+                        </div>`
+                )
+        }
+        
+
+}
+    
+    $("#days span").click(function(){
+        $("#games").hide()
+        let len = subjects.length-1;
+        $("#days span").removeClass("currentDay")
+        $(this).toggleClass("currentDay")
+        if($(this).attr("id")!="wknd"){
+            $(".time-table").show()
+            let day = $(this).html(),Day=[];
+            randomize(day,Day);       
+            $("section#index").empty();
+            for (var i=len; i>=0; i--){
+                $("section#index").append(
+                    `<div class="col-xl-12 ">
+                            <div class="card">
+                            <img class="card-img" src="${subjects[Day[i]-1].image}" alt="subject">
+                            <div class="card-img-overlay text-white ">
+                                <h4 class="card-title">${subjects[Day[i]-1].subject}</h4>
+                                <a href="https://meet.google.com/sqb-rzrs-jee" target="_blank" class="card-link">https://meet.google.com/sqb-rzrs-jee</a>
+                                <h6 class="card-subtitle mb-2">${subjects[Day[i]-1].teacher}</h6>
+                                <p class="card-text">SLOT: ${slots[len-i].slot}</p>
+                            </div>
+                            </div>
+                        </div>`
+                )
+            }
+        }
+        else if($(this).attr("id")=="wknd"){
+                $("section#index").empty();
+                $("#wknd").addClass("currentDay");
+                $(".time-table").hide()
+                $("#games").show()
+            
+        }
+        
 })
 
-
-
-function createCookie(name, value, days) {
-    var expires;
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toGMTString();
-    }
-    else {
-        expires = "";
-    }
-    document.cookie = name + "=" + value + expires + "; path=/";
-}
-
-function getCookie(c_name) {
-    if (document.cookie.length > 0) {
-        c_start = document.cookie.indexOf(c_name + "=");
-        if (c_start != -1) {
-            c_start = c_start + c_name.length + 1;
-            c_end = document.cookie.indexOf(";", c_start);
-            if (c_end == -1) {
-                c_end = document.cookie.length;
-            }
-            return unescape(document.cookie.substring(c_start, c_end));
-        }
-    }
-    return "";
-}
-if(getCookie()==" ")
-{
-    setTimeout(function(){
-        $('#myModal').modal('show');
-    }, 0);
-}
 $(window).on('load',function(){
-    $('#myModal').modal('show');
     setTimeout(function(){
         $('#myModal').modal('show');
    }, 0);
@@ -231,8 +220,8 @@ $("#studentClass").focusout(function() {
     var name = $("#name").val();
     setTimeout(function(){
         $('#myModal2').modal('show');
-   }, 2500);
+   }, 1500);
     $(".welcome").empty();
-     $(".welcome").append("<h4 class='text-center'>Hello! "+name+ "</h4><h4 class='text-center'>Welcome to</h4><br><img src='images/welcome.jpg' height='250'>");
+     $(".welcome").append("<h4 class='text-center'>Hello! "+name+ "&#128522</h4><h4 class='text-center'>Welcome to</h4><br><img src='images/welcome.jpg' height='250'>");
 })
 
