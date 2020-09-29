@@ -197,10 +197,10 @@ $(window).on('load',function(){
 //     setTimeout(function(){
 //         $('#myModal').modal('show');
 //    }, 0);
-   $('#myModal').modal({
-        backdrop: 'static',
-        keyboard: false
-    })
+//    $('#myModal').modal({
+//         backdrop: 'static',
+//         keyboard: false
+//     })
 });
 
 $(".welcomeUser").attr("disabled","true");

@@ -1,5 +1,8 @@
 $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
-
+$(window).load(function() {
+  $(".loader").delay(2000).fadeOut("slow");
+  $("#overlayer").delay(2000).fadeOut("slow");
+})
 // detect scroll top or down
 if ($('.smart-scroll').length > 0) { // check if element exists
     var last_scroll_top = 0;

@@ -4,9 +4,58 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    cursor: url(/images/cursor3.ico) 2 2, auto!important;
+    cursor: url(/images/cursor.ico) 2 2, auto!important;
     /* cursor: url(https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico), auto; */
 }
+/* preloader */
+#overlayer {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width:100%;
+  height:595%;  
+  position:absolute;
+  z-index:999999;
+  /* background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),#000; */
+  background: #fff;
+  opacity: 1;
+
+}
+.loader {
+ z-index: 999999999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  animation: loader 4s ease alternate;
+}
+.loader-img{
+  width: 400px;
+  height: 400px;
+}
+@keyframes loader{
+  0%{
+    transform:translate(-50%, -50%) scale(0.9);
+  }
+  20%{
+    transform:translate(-50%, -50%) scale(1);
+  }
+  40%{
+    transform:translate(-50%, -50%) scale(0.9);
+  }
+  60%{
+    transform:translate(-50%, -50%) scale(1);
+  }
+  80%{
+    transform:translate(-50%, -50%) scale(0.9);
+  }
+  100%{
+    transform:translate(-50%, -50%) scale(1);
+  }
+}
+
+
 
 /* navbar  */
 body.modal-open #index,body.modal-open #days,body.modal-open #navbar,body.modal-open #bottom-nav,body.modal-open #footer,body.modal-open #bgImg{
@@ -30,9 +79,14 @@ body.modal-open #index,body.modal-open #days,body.modal-open #navbar,body.modal-
 }
 #navbar nav{
     background: rgb(6, 0, 83)!important;
-    height: 60px;
+    height: 75px;
     border-bottom: 1px solid rgb(3, 0, 49);
 
+} 
+#navbar nav .navbar-brand img{
+  height: 230px;
+  margin-top: 10px;
+  margin-left: -20px;
 }
 #navbar nav .navbar-nav li a{
     color: rgb(185, 185, 185);
@@ -118,6 +172,10 @@ body.modal-open #index,body.modal-open #days,body.modal-open #navbar,body.modal-
   #bottom-nav .nav li a{
     display: inline!important;
     padding:0 13vw!important;
+  }
+  .loader-img{
+    width: 350px;
+    height: 350px;
   }
 }
 @media(max-width:392px){

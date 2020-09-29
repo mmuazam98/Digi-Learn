@@ -21,9 +21,13 @@
 #class .btn:hover,#class .btn:focus {
     transform: scale(1.05);
 }
+#class .modalImg{
+    display: flex;
+    justify-content: center;
+}
 #class .container input{
     border: 1px solid grey!important;
-    margin: 5px 10px;
+    margin: 5px 15px;
 }
 
 #index {
