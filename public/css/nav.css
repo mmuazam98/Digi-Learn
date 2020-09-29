@@ -87,10 +87,12 @@ body.modal-open #index,body.modal-open #days,body.modal-open #navbar,body.modal-
   height: 230px;
   margin-top: 10px;
   margin-left: -20px;
+  filter: drop-shadow(5px 5px 5px #000);
 }
 #navbar nav .navbar-nav li a{
     color: rgb(185, 185, 185);
     margin: 0 20px;
+    font-size: 18px;
     transition: 0.1s;
     transform: scale(1);
     cursor: pointer;
