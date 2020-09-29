@@ -4,43 +4,42 @@ $(window).on('load',function(){
 });
 
 var subjects = [
-        {
-            subject: 'Computer',
-            link: 'https://meet.google.com/computer',
-            teacher: 'Er. S Babu',
-            image: 'images/13.jpg'
-        },
-        {
-            subject: 'English',
-            link: 'https://meet.google.com/english',
-            teacher: 'Dr. S Sameehah',
-            image: 'images/17.jpg'
-        },
-        {
-            subject: 'Science',
-            link: 'https://meet.google.com/science',
-            teacher: 'Er. Gobi M',
-            image: 'images/11.jpg'
-        },
-        {
-            subject: 'Hindi',
-            link: 'https://meet.google.com/hindi',
-            teacher: 'Mr. M Sureshkumar',
-            image: 'images/14.jpg'
-        },
-        {
-            subject: 'Mathematics',
-            link: 'https://meet.google.com/maths',
-            teacher: 'Mrs. Annie U',
-            image: 'images/15.jpg'
-        },        
-        {
-            subject: 'Social Studies',
-            link: 'https://meet.google.com/s-science',
-            teacher: 'Dr. S Sameehah',
-            image: 'images/12.jpg'
-        }
-       
+    {
+        subject: 'Computer',
+        link: 'https://meet.google.com/computer',
+        teacher: 'Er. S Babu',
+        image: 'images/13.jpg'
+    },
+    {
+        subject: 'English',
+        link: 'https://meet.google.com/english',
+        teacher: 'Dr. S Sameehah',
+        image: 'images/17.jpg'
+    },
+    {
+        subject: 'Science',
+        link: 'https://meet.google.com/science',
+        teacher: 'Er. Gobi M',
+        image: 'images/11.jpg'
+    },
+    {
+        subject: 'Hindi',
+        link: 'https://meet.google.com/hindi',
+        teacher: 'Mr. M Sureshkumar',
+        image: 'images/14.jpg'
+    },
+    {
+        subject: 'Mathematics',
+        link: 'https://meet.google.com/maths',
+        teacher: 'Mrs. Annie U',
+        image: 'images/15.jpg'
+    },        
+    {
+        subject: 'Social Studies',
+        link: 'https://meet.google.com/s-science',
+        teacher: 'Dr. S Sameehah',
+        image: 'images/12.jpg'
+    }  
 ];
 var slots =[
     {
@@ -210,11 +209,13 @@ $("#studentClass").focusout(function() {
             $("#class #human").notify("Click here!",{ position:"top left",className: "info",showAnimation: 'slideDown',autoHideDelay: 1500  });
         }
     }
-    else{
+    else if(parseInt(stdClass)>6){
         // alert("You're too old for this!")
-        $.notify("You're too old for this!",{ position:"top left",className: "error"  });
+        $.notify("Coming soon for classes 7th and above.",{ position:"top left",className: "error"  });
     }
-        
+    else{
+        $.notify("Please enter your details",{ position:"top left",className: "error"  });
+    }    
   })
   $(".welcomeUser").click(function(){
     var name = $("#name").val();
