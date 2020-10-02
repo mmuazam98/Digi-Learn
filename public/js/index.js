@@ -1,8 +1,3 @@
-$(window).on('load',function(){
-    $('#exampleModal').modal('show');
-    // $.notify("Hello World");
-});
-
 var subjects = [
     {
         subject: 'Computer',
@@ -95,7 +90,9 @@ weekday[5]="Fri";
 weekday[6]="Sat";
 
 var d = new Date();
+
 var n = weekday[d.getDay()];
+
 // alert(d.getDay()-1)
 // alert("span#"+n)
 let Day=[]
@@ -181,15 +178,6 @@ if(n!="Sat"&&n!="Sun"){
         
 })
 
-$(window).on('load',function(){
-    setTimeout(function(){
-        $('#myModal').modal('show');
-   }, 0);
-   $('#myModal').modal({
-        backdrop: 'static',
-        keyboard: false
-    })
-});
 
 $(".welcomeUser").attr("disabled","true");
 $("#human").attr("disabled","true");
@@ -217,12 +205,54 @@ $("#studentClass").focusout(function() {
         $.notify("Please enter your details",{ position:"top left",className: "error"  });
     }    
   })
+
+
+
   $(".welcomeUser").click(function(){
-    var name = $("#name").val();
+    let name = $("#name").val();
+    store();
+
+    
     setTimeout(function(){
         $('#myModal2').modal('show');
    }, 1500);
     $(".welcome").empty();
      $(".welcome").append("<h4 class='text-center'>Hello! "+name+ "&#128522</h4><h4 class='text-center'>Welcome to</h4><br><img src='images/welcome.jpg' class='img-fluid' height='250'>");
 })
+
+$(window).on('load',function(){
+    
+    getValues();
+})
+
+function store() {
+    let name = $("#name").val();
+
+    window.localStorage.myitems = name;
+}
+
+function getValues() {
+    var storedValues = window.localStorage.myitems;
+    // alert(storedValues)
+    if(!storedValues) {
+            // alert("hi")
+            $('#exampleModal').modal('show');
+            $(".loader").delay(2000).fadeOut("slow");
+            $("#overlayer").delay(2000).fadeOut("slow");
+            setTimeout(function(){
+                $('#myModal').modal('show');
+           }, 0);
+           $('#myModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            })
+        
+        
+    }
+    else {
+        // alert(storedValues)
+        $(".loader").delay(100).fadeOut("slow");
+        $("#overlayer").delay(100).fadeOut("slow");
+    }
+}
 

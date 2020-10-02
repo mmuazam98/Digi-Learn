@@ -1,10 +1,4 @@
-$('body').css('padding-top', $('.navbar').outerHeight() + 'px')
-
-$(window).load(function() {
-
-  $(".loader").delay(2000).fadeOut("slow");
-  $("#overlayer").delay(2000).fadeOut("slow");
-})
+$('body').css('padding-top', $('.navbar').outerHeight() + 'px');
 // detect scroll top or down
 if ($('.smart-scroll').length > 0) { // check if element exists
     var last_scroll_top = 0;
@@ -94,35 +88,36 @@ function validateEmail(email) {
       }
     });
   
-    $('#contactform').submit(function() {
-      var name = $('#name').val();
-      var email = $('#email').val();
-      var message = $('#message').val();
-      var human = $('#human:checked').val();
+  //   $('#contactform').submit(function() {
+  //     var name = $('#name').val();
+  //     var email = $('#email').val();
+  //     var message = $('#message').val();
+  //     var human = $('#human-form:checked').val();
   
-      if (human) {
-        if (validateEmail(email)) {
-          if (name) {
-            if (message) {
-              closeForm();
+  //     if (human) {
+  //       if (validateEmail(email)) {
+  //         if (name) {
+  //           if (message) {
+  //             closeForm();
   
-            } else {
-              $('#notification-text').html("<strong>Please let us know what you're thinking!</strong>");
-              $('.notification').addClass('is-visible');
-            }
-          } else {
-            $('#notification-text').html('<strong>Please provide a name.</strong>');
-            $('.notification').addClass('is-visible');
-          }
-        } else {
-          $('#notification-text').html('<strong>Please use a valid email address.</strong>');
-          $('.notification').addClass('is-visible');
-        }
-      } else {
-        $('#notification-text').html('<h3><strong><em>Warning: Please prove you are a human and not a robot.</em></strong></h3>');
-        $('.notification').addClass('is-visible');
-      }
+  //           } else {
+  //             $('#notification-text').html("<strong>Please let us know what you're thinking!</strong>");
+  //             $('.notification').addClass('is-visible');
+  //           }
+  //         } else {
+  //           $('#notification-text').html('<strong>Please provide a name.</strong>');
+  //           $('.notification').addClass('is-visible');
+  //         }
+  //       } else {
+  //         $('#notification-text').html('<strong>Please use a valid email address.</strong>');
+  //         $('.notification').addClass('is-visible');
+  //       }
+  //     } else {
+  //       $('#notification-text').html('<h3><strong><em>Warning: Please prove you are a human and not a robot.</em></strong></h3>');
+  //       $('.notification').addClass('is-visible');
+  //     }
   
-      return false;
-    });
-  });
+  //     return false;
+  //   });
+  
+  })
